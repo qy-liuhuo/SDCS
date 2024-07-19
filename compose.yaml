@@ -1,0 +1,29 @@
+version: '3'
+services:
+  sdcs0:
+    build: .
+    container_name: SDCS0
+    ports:
+     - "9527:80"
+    environment:
+     - port=9527
+     - id=0
+    # network_mode: "host"
+  sdcs1:
+    build: .
+    container_name: SDCS1
+    ports:
+     - "9528:80"
+    environment:
+     - port=9528
+     - id=1
+    # network_mode: "host"
+  sdcs2:
+    build: .
+    container_name: SDCS2
+    ports:
+     - "9529:80"
+    environment:
+     - port=9529
+     - id=2
+    # network_mode: "host"
